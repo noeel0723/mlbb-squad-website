@@ -1720,11 +1720,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /* Align to bottom for depth effect */
-    height: 260px;
+    height: auto;
+    min-height: 300px;
     position: relative;
-    padding-top: 30px;
+    padding-top: 36px;
     padding-bottom: 10px;
+    gap: 32px;
 }
 
 .hero-3d-card {
@@ -1732,6 +1733,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
     border-radius: 12px;
     overflow: visible;
     background: none;
@@ -1741,98 +1743,90 @@ img {
 }
 
 .hero-3d-card img {
-    width: 100%;
-    height: 100%;
+    display: block;
     object-fit: contain;
     transition: all 0.4s ease;
 }
 
 .hero-3d-info {
-    position: absolute;
-    bottom: 15px;
-    background: rgba(10, 15, 12, 0.85);
-    padding: 6px 16px;
-    border-radius: 8px;
-    white-space: nowrap;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
+    display: none;
 }
 
 .hero-rank-num {
     position: absolute;
-    top: -22px;
+    top: -30px;
     left: 50%;
     transform: translateX(-50%);
     background: none;
-    color: var(--cream);
-    font-size: 0.8rem;
+    color: rgba(243, 239, 227, 0.65);
+    font-size: 1rem;
     font-family: var(--font-display);
     font-weight: 700;
-    letter-spacing: 0.5px;
-    opacity: 0.7;
+    letter-spacing: 1.5px;
     z-index: 10;
+    white-space: nowrap;
 }
 
 .main-hero .hero-rank-num {
     color: #ffd700;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 800;
-    opacity: 1;
-    top: -22px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: -32px;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.55);
 }
 
 .hero-3d-name {
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    color: rgba(243, 239, 227, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 2px;
+}
+
+.main-hero .hero-3d-name {
+    color: var(--cream);
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--cream);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    opacity: 1;
 }
 
 .hero-3d-card:hover {
-    transform: scale(1.1) translateY(-10px);
+    transform: scale(1.08) translateY(-8px);
     z-index: 10 !important;
     box-shadow: 0 15px 30px rgba(218, 165, 32, 0.2);
 }
 
-.hero-3d-card:hover .hero-3d-info {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .hero-3d-card:hover img {
-    transform: scale(1.1);
-    /* Zoom effect on hover */
+    transform: scale(1.06);
 }
 
 /* Specific Positions */
 .left-hero,
 .right-hero {
+    z-index: 1;
+    filter: brightness(0.82);
+    margin-bottom: 0;
+}
+
+.left-hero img,
+.right-hero img {
     width: 110px;
     height: 160px;
-    z-index: 1;
-    filter: brightness(0.6);
-}
-
-.left-hero {
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
-
-.right-hero {
-    margin-left: 20px;
-    margin-bottom: 20px;
 }
 
 .main-hero {
-    width: 140px;
-    height: 200px;
     z-index: 5;
     animation: floatHero 6s ease-in-out infinite;
+    margin-bottom: 0;
+}
+
+.main-hero img {
+    width: 155px;
+    height: 215px;
 }
 
 .hero-glow {
@@ -1867,36 +1861,31 @@ img {
 /* Mobile Adjustments for 3D layout */
 @media (max-width: 480px) {
     .hero-3d-layout {
-        height: 150px;
+        min-height: 220px;
+        gap: 16px;
+        padding-top: 30px;
     }
 
-    .main-hero {
+    .main-hero img {
         width: 110px;
         height: 155px;
     }
 
-    .left-hero,
-    .right-hero {
+    .left-hero img,
+    .right-hero img {
         width: 80px;
-        height: 120px;
-    }
-
-    .left-hero {
-        margin-right: 12px;
-        margin-bottom: 5px;
-    }
-
-    .right-hero {
-        margin-left: 12px;
-        margin-bottom: 5px;
-    }
-
-    .hero-3d-info {
-        bottom: -20px;
-        padding: 4px 10px;
+        height: 115px;
     }
 
     .hero-3d-name {
-        font-size: 0.75rem;
+        font-size: 0.65rem;
+    }
+
+    .hero-rank-num {
+        font-size: 0.85rem;
+    }
+
+    .main-hero .hero-rank-num {
+        font-size: 1rem;
     }
 }

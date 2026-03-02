@@ -299,9 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="hero-3d-card side-hero left-hero">
                 <div class="hero-rank-num">2</div>
                 <img src="assets/${h1.img}" alt="${h1.name}" onerror="this.style.display='none'">
-                <div class="hero-3d-info">
-                    <span class="hero-3d-name">${h1.name}</span>
-                </div>
+                <span class="hero-3d-name">${h1.name}</span>
             </div>`;
 
         if (h0) heroesHTML += `
@@ -309,18 +307,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="hero-glow"></div>
                 <div class="hero-rank-num">1</div>
                 <img src="assets/${h0.img}" alt="${h0.name}" onerror="this.style.display='none'">
-                <div class="hero-3d-info">
-                    <span class="hero-3d-name">${h0.name}</span>
-                </div>
+                <span class="hero-3d-name">${h0.name}</span>
             </div>`;
 
         if (h2) heroesHTML += `
             <div class="hero-3d-card side-hero right-hero">
                 <div class="hero-rank-num">3</div>
                 <img src="assets/${h2.img}" alt="${h2.name}" onerror="this.style.display='none'">
-                <div class="hero-3d-info">
-                    <span class="hero-3d-name">${h2.name}</span>
-                </div>
+                <span class="hero-3d-name">${h2.name}</span>
             </div>`;
 
         heroesHTML += `</div>`;
