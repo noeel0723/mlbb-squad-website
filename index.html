@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aero — Squad Mobile Legends: Bang Bang.">
+    <meta property="og:title" content="Aero — MLBB Squad">
+    <meta property="og:description" content="Squad MLBB untuk have fun bareng teman-teman.">
+    <title>Aero — MLBB Squad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="assets/mobile-legends-logo.png" alt="MLBB Logo" class="logo-icon-img">
+                <img src="assets/AERO.PNG" alt="AERO" class="logo-text-img">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#members" class="nav-link">Members</a></li>
+                <li><a href="#leaderboard" class="nav-link">Ranks</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-character">
+            <img src="assets/granger.png" alt="Granger">
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">MOBILE LEGENDS: BANG BANG</div>
+            <h1 class="hero-title animate-on-scroll">
+                <span class="title-line accent">AERO</span>
+            </h1>
+            <p class="hero-subtitle animate-on-scroll">Mobile Legends: Bang Bang Squad</p>
+            <div class="hero-cta animate-on-scroll">
+                <a href="#about" class="btn btn-primary">About Us</a>
+                <a href="#members" class="btn btn-outline">Roster</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section about layout-split" id="about">
+        <!-- Background element mimicking the circle in the image -->
+        <div class="about-bg-circle animate-on-scroll"></div>
+
+        <div class="container about-container">
+            <!-- Left side content (Title, Main Text, Stats) -->
+            <div class="about-content-left">
+                <div class="section-header align-left animate-on-scroll">
+                    <span class="section-label">ABOUT</span>
+                    <div class="section-divider"></div>
+                    <h2 class="section-title giant-title">AERO<br>SQUAD</h2>
+
+                </div>
+
+                <p class="about-main-desc animate-on-scroll">
+                    Aero is a Mobile Legends: Bang Bang squad founded on August 6, 2023. <strong> Aero is a family.
+                    </strong> Together, we have fun and support each other.
+                </p>
+
+            </div>
+
+            <!-- Right side Character Image -->
+            <div class="about-character animate-on-scroll">
+                <img src="assets/hayabusa.png" alt="Hayabusa Hero">
+            </div>
+
+            <!-- Bottom Features Bar overlaying the bottom section -->
+            <div class="about-features-bar about-features-bar-stats">
+                <div class="feature-item feature-stat-item animate-on-scroll">
+                    <div class="stat">
+                        <span class="stat-number" data-target="14">0</span>
+                        <span class="stat-label">Active Members</span>
+                    </div>
+                </div>
+                <div class="feature-item feature-stat-item animate-on-scroll">
+                    <div class="stat">
+                        <span class="stat-number" data-target="17">0</span>
+                        <span class="stat-label">Total Slots</span>
+                    </div>
+                </div>
+                <div class="feature-item feature-stat-item animate-on-scroll">
+                    <div class="stat">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label">Open Slots</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MEMBERS SECTION ===== -->
+    <section class="section members" id="members">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Roster</span>
+                <h2 class="section-title">Our Members</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="members-grid">
+                <!-- Member 1 -->
+                <div class="member-card animate-on-scroll" data-role="assassin">
+                    <div class="member-avatar">
+                        <img src="assets/Gold Laner.png" alt="Gold Laner" class="role-avatar-img">
+                        <div class="member-role-badge">Gold Laner</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Nicole</h3>
+                        <span class="member-role">Leader</span>
+                    </div>
+                </div>
+                <!-- Member 2 -->
+                <div class="member-card animate-on-scroll" data-role="tank">
+                    <div class="member-avatar">
+                        <img src="assets/flexible.png" alt="Flexible" class="role-avatar-img">
+                        <div class="member-role-badge">Flexible</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Samwell</h3>
+                        <span class="member-role">The Versatile King</span>
+                    </div>
+                </div>
+                <!-- Member 3 -->
+                <div class="member-card animate-on-scroll" data-role="tank">
+                    <div class="member-avatar">
+                        <img src="assets/mid laner.png" alt="Mid Laner" class="role-avatar-img">
+                        <div class="member-role-badge">Mid Laner</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Waneki</h3>
+                        <span class="member-role">The Best Midlaner</span>
+                    </div>
+                </div>
+                <!-- Member 4 -->
+                <div class="member-card animate-on-scroll" data-role="fighter">
+                    <div class="member-avatar">
+                        <img src="assets/mid laner.png" alt="Mid Laner" class="role-avatar-img">
+                        <div class="member-role-badge">Mid Laner</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Evatetsu</h3>
+                        <span class="member-role">The True Damager</span>
+                    </div>
+                </div>
+                <!-- Member 5 -->
+                <div class="member-card animate-on-scroll" data-role="marksman">
+                    <div class="member-avatar">
+                        <img src="assets/Jungler.png" alt="Jungler/Exp" class="role-avatar-img">
+                        <div class="member-role-badge">Jungler</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Francis. Yongg~66</h3>
+                        <span class="member-role">The Carry Jungler</span>
+                    </div>
+                </div>
+                <!-- Member 6 -->
+                <div class="member-card animate-on-scroll" data-role="fighter">
+                    <div class="member-avatar">
+                        <img src="assets/Jungler.png" alt="Jungler" class="role-avatar-img">
+                        <div class="member-role-badge">Jungler</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Cfyuu.</h3>
+                        <span class="member-role">The Choosen Jungler</span>
+                    </div>
+                </div>
+                <!-- Member 7 -->
+                <div class="member-card animate-on-scroll" data-role="mage">
+                    <div class="member-avatar">
+                        <img src="assets/mid laner.png" alt="Midlaner" class="role-avatar-img">
+                        <div class="member-role-badge">Midlaner</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Kayyie</h3>
+                        <span class="member-role">Not Available</span>
+                    </div>
+                </div>
+                <!-- Member 8 -->
+                <div class="member-card animate-on-scroll" data-role="fighter">
+                    <div class="member-avatar">
+                        <img src="assets/Exp Laner.png" alt="Exp Laner" class="role-avatar-img">
+                        <div class="member-role-badge">Exp Laner</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Asamiya</h3>
+                        <span class="member-role">Mr Laning Phase</span>
+                    </div>
+                </div>
+                <!-- Member 9 -->
+                <div class="member-card animate-on-scroll" data-role="fighter">
+                    <div class="member-avatar">
+                        <img src="assets/Exp Laner.png" alt="Flexible" class="role-avatar-img">
+                        <div class="member-role-badge">Exp Laner</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Amuro ray.</h3>
+                        <span class="member-role">Exp Dominator</span>
+                    </div>
+                </div>
+                <!-- Member 10 -->
+                <div class="member-card animate-on-scroll" data-role="mage">
+                    <div class="member-avatar">
+                        <img src="assets/mid laner.png" alt="Mid Laner" class="role-avatar-img">
+                        <div class="member-role-badge">Mid Laner</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Claire</h3>
+                        <span class="member-role">Shock Teleportation</span>
+                    </div>
+                </div>
+                <!-- Member 11 -->
+                <div class="member-card animate-on-scroll" data-role="assassin">
+                    <div class="member-avatar">
+                        <img src="assets/mid laner.png" alt="Mid Laner" class="role-avatar-img">
+                        <div class="member-role-badge">Mid Laner</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">MiGUEL.</h3>
+                        <span class="member-role">Mrs Highground</span>
+                    </div>
+                </div>
+                <!-- Member 12 - Placeholder -->
+                <div class="member-card animate-on-scroll member-unknown">
+                    <div class="member-avatar">
+                        <img src="assets/Exp Laner.png" alt="Exp Laner" class="role-avatar-img">
+                        <div class="member-role-badge">Exp Laner</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Tennndo.</h3>
+                        <span class="member-role">The Aggresive One</span>
+                    </div>
+                </div>
+                <!-- Member 13 - Placeholder -->
+                <div class="member-card animate-on-scroll member-unknown">
+                    <div class="member-avatar">
+                        <img src="assets/flexible.png" alt="Flexible" class="role-avatar-img">
+                        <div class="member-role-badge">Flexible</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Opheliaaa.</h3>
+                        <span class="member-role">The Destroyer</span>
+                    </div>
+                </div>
+                <!-- Member 14 - Placeholder -->
+                <div class="member-card animate-on-scroll member-unknown">
+                    <div class="member-avatar">
+                        <img src="assets/roamer.png" alt="Roamer" class="role-avatar-img">
+                        <div class="member-role-badge">Roamer</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Locklie_</h3>
+                        <span class="member-role">Mr Of Montage </span>
+                    </div>
+                </div>
+                <!-- Open Slots -->
+                <div class="member-card animate-on-scroll member-open">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder open">+</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Open Slot</h3>
+                        <span class="member-role">Slot tersedia</span>
+                    </div>
+                </div>
+                <div class="member-card animate-on-scroll member-open">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder open">+</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Open Slot</h3>
+                        <span class="member-role">Slot tersedia</span>
+                    </div>
+                </div>
+                <div class="member-card animate-on-scroll member-open">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder open">+</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Open Slot</h3>
+                        <span class="member-role">Slot tersedia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SQUAD LEADERBOARD SECTION ===== -->
+    <section class="section leaderboard" id="leaderboard">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Highest Rank</span>
+                <h2 class="section-title">Squad Leaderboard</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Leaderboard Table/List -->
+            <div class="leaderboard-container animate-on-scroll">
+                <div class="leaderboard-header">
+                    <div class="lb-col lb-rank">#</div>
+                    <div class="lb-col lb-player">Player</div>
+                    <div class="lb-col lb-role">Role</div>
+                    <div class="lb-col lb-tier">Highest Rank</div>
+                    <div class="lb-col lb-score">Star</div>
+                </div>
+
+                <div class="leaderboard-body">
+                    <!-- Row 1 -->
+                    <div class="leaderboard-row" data-tier="mythic">
+                        <div class="lb-col lb-rank"><span class="rank-number top-1">1</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/ling.jpg" class="lb-avatar" alt="Avatar">
+                            <span class="player-name">Francis. Yongg~66</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/Jungler.png" class="lb-role-icon" alt="Role"></div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Immortal.png" class="lb-tier-icon" alt="Mythic">
+                            <span class="tier-name">Mythic Immortal</span>
+                        </div>
+                        <div class="lb-col lb-score">124 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="leaderboard-row" data-tier="mythic">
+                        <div class="lb-col lb-rank"><span class="rank-number top-2">2</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/kakashi.jpg" class="lb-avatar" alt="Avatar">
+                            <span class="player-name">Cfyuu</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/Jungler.png" class="lb-role-icon" alt="Role"></div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Immortal.png" class="lb-tier-icon" alt="Mythic">
+                            <span class="tier-name">Mythic Immortal</span>
+                        </div>
+                        <div class="lb-col lb-score">123 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 3 -->
+                    <div class="leaderboard-row" data-tier="mythic">
+                        <div class="lb-col lb-rank"><span class="rank-number top-3">3</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/guinevere.jpg" class="lb-avatar" alt="Avatar">
+                            <span class="player-name">Asamiya</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/Exp Laner.png" class="lb-role-icon" alt="Role">
+                        </div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Immortal.png" class="lb-tier-icon" alt="Mythic">
+                            <span class="tier-name">Mythic Immortal</span>
+                        </div>
+                        <div class="lb-col lb-score">117 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 4 -->
+                    <div class="leaderboard-row" data-tier="mythic">
+                        <div class="lb-col lb-rank"><span class="rank-number">4</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/lapulapu.jpg" class="lb-avatar legend-ava" alt="Avatar">
+                            <span class="player-name">Amuro ray.</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/Exp Laner.png" class="lb-role-icon" alt="Role">
+                        </div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Immortal.png" class="lb-tier-icon" alt="Legend">
+                            <span class="tier-name">Mythic Immortal</span>
+                        </div>
+                        <div class="lb-col lb-score">114 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 5 -->
+                    <div class="leaderboard-row" data-tier="legend">
+                        <div class="lb-col lb-rank"><span class="rank-number">5</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/fanny.jpg" class="lb-avatar legend-ava" alt="Avatar">
+                            <span class="player-name">Samwell</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/flexible.png" class="lb-role-icon" alt="Role">
+                        </div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Immortal.png" class="lb-tier-icon" alt="Legend">
+                            <span class="tier-name">Mythic Immortal</span>
+                        </div>
+                        <div class="lb-col lb-score">109 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 6 -->
+                    <div class="leaderboard-row" data-tier="legend">
+                        <div class="lb-col lb-rank"><span class="rank-number">6</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/tigreal.jpg" class="lb-avatar legend-ava" alt="Avatar">
+                            <span class="player-name">Locklie_</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/roamer.png" class="lb-role-icon" alt="Role"></div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Immortal.png" class="lb-tier-icon" alt="Legend">
+                            <span class="tier-name">Mythic Immortal</span>
+                        </div>
+                        <div class="lb-col lb-score">105 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 7 -->
+                    <div class="leaderboard-row" data-tier="legend">
+                        <div class="lb-col lb-rank"><span class="rank-number">7</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/luoyi.jpg" class="lb-avatar legend-ava" alt="Avatar">
+                            <span class="player-name">Claire</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/mid laner.png" class="lb-role-icon" alt="Role">
+                        </div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Immortal.png" class="lb-tier-icon" alt="Legend">
+                            <span class="tier-name">Mythic Immortal</span>
+                        </div>
+                        <div class="lb-col lb-score">102 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 8 -->
+                    <div class="leaderboard-row" data-tier="epic">
+                        <div class="lb-col lb-rank"><span class="rank-number">8</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/granger.jpg" class="lb-avatar epic-ava" alt="Avatar">
+                            <span class="player-name">Nicole</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/Gold Laner.png" class="lb-role-icon" alt="Role">
+                        </div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Immortal.png" class="lb-tier-icon" alt="Epic">
+                            <span class="tier-name">Mythic Immortal</span>
+                        </div>
+                        <div class="lb-col lb-score">100 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 9 -->
+                    <div class="leaderboard-row" data-tier="epic">
+                        <div class="lb-col lb-rank"><span class="rank-number">9</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/cecilion.jpg" class="lb-avatar epic-ava" alt="Avatar">
+                            <span class="player-name">Kayyie</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/mid laner.png" class="lb-role-icon" alt="Role">
+                        </div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Glory.png" class="lb-tier-icon" alt="Epic">
+                            <span class="tier-name">Mythic Glory</span>
+                        </div>
+                        <div class="lb-col lb-score">92 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 10 -->
+                    <div class="leaderboard-row" data-tier="epic">
+                        <div class="lb-col lb-rank"><span class="rank-number">10</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/zhuxin2.jpg" class="lb-avatar epic-ava" alt="Avatar">
+                            <span class="player-name">Waneki</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/mid laner.png" class="lb-role-icon" alt="Role">
+                        </div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Glory.png" class="lb-tier-icon" alt="Epic">
+                            <span class="tier-name">Mythic Glory</span>
+                        </div>
+                        <div class="lb-col lb-score">76 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 11 -->
+                    <div class="leaderboard-row" data-tier="epic">
+                        <div class="lb-col lb-rank"><span class="rank-number">11</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/chip.jpg" class="lb-avatar epic-ava" alt="Avatar">
+                            <span class="player-name">Opheliaaa</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/flexible.png" class="lb-role-icon" alt="Role">
+                        </div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Glory.png" class="lb-tier-icon" alt="Epic">
+                            <span class="tier-name">Mythic Glory</span>
+                        </div>
+                        <div class="lb-col lb-score">68 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 12 -->
+                    <div class="leaderboard-row" data-tier="epic">
+                        <div class="lb-col lb-rank"><span class="rank-number">12</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/xborg.jpg" class="lb-avatar epic-ava" alt="Avatar">
+                            <span class="player-name">Tennndo</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/Exp Laner.png" class="lb-role-icon" alt="Role">
+                        </div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Glory.png" class="lb-tier-icon" alt="Epic">
+                            <span class="tier-name">Mythic Glory</span>
+                        </div>
+                        <div class="lb-col lb-score">56 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 13 -->
+                    <div class="leaderboard-row" data-tier="epic">
+                        <div class="lb-col lb-rank"><span class="rank-number">13</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/lylia.jpg" class="lb-avatar epic-ava" alt="Avatar">
+                            <span class="player-name">MiGUEL</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/mid laner.png" class="lb-role-icon" alt="Role">
+                        </div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Glory.png" class="lb-tier-icon" alt="Epic">
+                            <span class="tier-name">Mythic Glory</span>
+                        </div>
+                        <div class="lb-col lb-score">52 <i class="star-icon">★</i></div>
+                    </div>
+                    <!-- Row 14 -->
+                    <div class="leaderboard-row" data-tier="epic">
+                        <div class="lb-col lb-rank"><span class="rank-number">14</span></div>
+                        <div class="lb-col lb-player">
+                            <img src="assets/lunox.jpg" class="lb-avatar epic-ava" alt="Avatar">
+                            <span class="player-name">Evatetsu</span>
+                        </div>
+                        <div class="lb-col lb-role"><img src="assets/mid laner.png" class="lb-role-icon" alt="Role">
+                        </div>
+                        <div class="lb-col lb-tier">
+                            <img src="assets/Mythical_Glory.png" class="lb-tier-icon" alt="Epic">
+                            <span class="tier-name">Mythic Glory</span>
+                        </div>
+                        <div class="lb-col lb-score">51 <i class="star-icon">★</i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY SECTION ===== -->
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Moment</span>
+                <h2 class="section-title">Gallery</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll" id="gallery-1">
+                    <img src="assets/aero1.jpg.jpeg" alt="Squad Battle #1" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label">Match 1</span>
+                        <p>Match Have Fun Room Tournament</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll" id="gallery-2">
+                    <img src="assets/aero4.jpg.jpeg" alt="Ranked Match #1" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label">Match 2</span>
+                        <p>Match Have Fun Room Tournament</p>
+                    </div>
+                </div>
+                <div class="gallery-item animate-on-scroll" id="gallery-3">
+                    <img src="assets/aero3,jpg.jpeg" alt="Ranked Match #2" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label">Match 3</span>
+                        <p>Match Have Fun Room Tournament</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/mobile-legends-logo.png" alt="MLBB Logo" class="logo-icon-img">
+                    <img src="assets/AERO.PNG" alt="AERO" class="logo-text-img">
+                </div>
+                <p class="footer-tagline">The Greatest Squad Of All Time</p>
+                <div class="footer-divider"></div>
+                <p class="footer-copy">&copy; 2026 Aero. Mobile Legends: Bang Bang Squad</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Member Modal Template -->
+    <div class="member-modal-overlay" id="memberModal">
+        <div class="member-modal-content">
+            <button class="modal-close-btn" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <div class="modal-player-info">
+                    <h2 class="modal-name" id="modalName">Name</h2>
+                    <span class="modal-role" id="modalRole">Role</span>
+                </div>
+                <div class="modal-rank glow-effect">
+                    <img src="" alt="Rank" id="modalRankIcon">
+                    <span id="modalRankName">Unknown</span>
+                </div>
+            </div>
+
+            <div class="modal-stats">
+                <div class="stat-box">
+                    <span class="stat-value" id="modalMatches">0</span>
+                    <span class="stat-label">Matches</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-value" id="modalWR">0%</span>
+                    <span class="stat-label">Winrate</span>
+                    <div class="wr-progress-bg">
+                        <div class="wr-progress-fill" id="modalWRBar"></div>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-value" id="modalMVP">0</span>
+                    <span class="stat-label">MVP</span>
+                </div>
+            </div>
+
+            <h3 class="modal-sub-title">Favorite Heroes</h3>
+            <div class="modal-heroes" id="modalHeroesList">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
