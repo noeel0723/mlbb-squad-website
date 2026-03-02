@@ -372,4 +372,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // === GALLERY LIGHTBOX ===
+    const lightboxOverlay = document.getElementById('lightboxOverlay');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const imgEl = item.querySelector('.gallery-img');
+            const captionSpan = item.querySelector('.gallery-overlay .gallery-label');
+            const descP = item.querySelector('.gallery-overlay p');
+
+            if (imgEl && lightboxImg) {
+                lightboxImg.src = imgEl.src;
+
+                if (captionSpan && descP) {
+                    lightboxCaption.textContent = `${captionSpan.textContent}: ${descP.textContent}`;
+                } else {
+                    lightboxCaption.textContent = "Moments";
+                }
+
+                lightboxOverlay.classList.add('active');
+            }
+        });
+    });
+
+    function closeLightbox() {
+        if (lightboxOverlay) lightboxOverlay.classList.remove('active');
+    }
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+
+    if (lightboxOverlay) lightboxOverlay.addEventListener('click', (e) => {
+        if (e.target === lightboxOverlay) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightboxOverlay && lightboxOverlay.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
 });
