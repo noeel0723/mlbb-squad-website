@@ -256,20 +256,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === MEMBER MODAL ===
     const memberDatabase = {
-        "nicole": { name: "Nicole", role: "Gold Laner", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1240, winrate: 68.5, mvp: 450, heroes: [{ name: "Granger", img: "granger.jpg", wr: 72.1 }, { name: "Claude", img: "claude.jpg", wr: 65.4 }, { name: "Harith", img: "harith.jpg", wr: 60.2 }] },
-        "samwell": { name: "Samwell", role: "Flexible", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1100, winrate: 64.2, mvp: 380, heroes: [{ name: "Fanny", img: "fanny.jpg", wr: 68.0 }, { name: "Guinevere", img: "guinevere.jpg", wr: 60.5 }, { name: "Sora", img: "sora.jpg", wr: 59.0 }] },
-        "waneki": { name: "Waneki", role: "Mid Laner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 1560, winrate: 62.1, mvp: 320, heroes: [{ name: "Zhuxin", img: "zhuxin2.jpg", wr: 65.8 }, { name: "Pharsa", img: "pharsa.jpg", wr: 60.1 }, { name: "Yve", img: "yve.jpg", wr: 55.4 }] },
-        "evatetsu": { name: "Evatetsu", role: "Mid Laner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 980, winrate: 59.5, mvp: 210, heroes: [{ name: "Lunox", img: "lunox.jpg", wr: 62.1 }, { name: "Vexana", img: "vexana.jpg", wr: 58.0 }, { name: "Aurora", img: "aurora.jpg", wr: 54.2 }] },
-        "francis": { name: "Francis. Yongg~66", role: "Jungler/Exp", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 2100, winrate: 71.2, mvp: 850, heroes: [{ name: "Ling", img: "ling.jpg", wr: 75.0 }, { name: "Alice", img: "alice.jpg", wr: 70.1 }, { name: "Cici", img: "cici.jpg", wr: 68.0 }] },
-        "cfyuu": { name: "Cfyuu.", role: "Jungler", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1850, winrate: 69.8, mvp: 720, heroes: [{ name: "Hayabusa", img: "kakashi.jpg", wr: 74.5 }, { name: "Joy", img: "joy.jpg", wr: 68.2 }, { name: "Yi Sun-Shin", img: "yss.jpg", wr: 65.0 }] },
-        "kayyie": { name: "Kayyie", role: "Midlaner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 850, winrate: 55.4, mvp: 180, heroes: [{ name: "Cecilion", img: "cecilion.jpg", wr: 62.0 }, { name: "Vale", img: "vale.jpg", wr: 58.0 }, { name: "Nana", img: "nana.jpg", wr: 54.0 }] },
-        "asamiya": { name: "Asamiya", role: "Exp Laner", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1350, winrate: 65.2, mvp: 410, heroes: [{ name: "Cici", img: "cici.jpg", wr: 68.5 }, { name: "Guinevere", img: "guinevere.jpg", wr: 63.2 }, { name: "Ruby", img: "ruby.jpg", wr: 60.1 }] },
-        "amuro": { name: "Amuro ray.", role: "Flexible", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1420, winrate: 66.8, mvp: 430, heroes: [{ name: "Lapu Lapu", img: "lapulapu.jpg", wr: 70.1 }, { name: "Alice", img: "alice.jpg", wr: 65.0 }, { name: "Uranus", img: "uranus.jpg", wr: 62.5 }] },
-        "claire": { name: "Claire", role: "Mid Laner", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1150, winrate: 63.5, mvp: 300, heroes: [{ name: "Luo Yi", img: "luoyi.jpg", wr: 66.8 }, { name: "Vexana", img: "vexana.jpg", wr: 61.2 }, { name: "Zetian", img: "zetian.jpg", wr: 58.0 }] },
-        "miguel": { name: "MiGUEL.", role: "Mid Laner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 920, winrate: 58.2, mvp: 210, heroes: [{ name: "Lylia", img: "lylia.jpg", wr: 61.0 }, { name: "Kagura", img: "kagura.jpg", wr: 56.5 }, { name: "Xavier", img: "xavier.jpg", wr: 53.0 }] },
-        "tennndo": { name: "Tennndo.", role: "Exp Laner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 780, winrate: 54.5, mvp: 160, heroes: [{ name: "Xborg", img: "xborg.jpg", wr: 59.2 }, { name: "Yu Zhong", img: "yuzhong.jpg", wr: 55.0 }, { name: "Sora", img: "sora.jpg", wr: 50.1 }] },
-        "ophelia": { name: "Opheliaaa.", role: "Flexible", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 810, winrate: 56.8, mvp: 190, heroes: [{ name: "Chip", img: "chip.jpg", wr: 60.5 }, { name: "Lukas", img: "lukas.jpg", wr: 55.4 }, { name: "Freya", img: "freya.jpg", wr: 53.2 }] },
-        "locklie": { name: "Locklie_", role: "Roamer", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1680, winrate: 61.5, mvp: 280, heroes: [{ name: "Tigreal", img: "tigreal.jpg", wr: 64.0 }, { name: "Minotaur", img: "minotaur.jpg", wr: 60.5 }, { name: "Gatotkaca", img: "gatotkaca.jpg", wr: 58.2 }] }
+        "nicole": { name: "Nicole", role: "Gold Laner", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1240, winrate: 68.5, mvp: 450, heroes: [{ name: "Granger", img: "granger2.png", wr: 72.1 }, { name: "Claude", img: "claude.png", wr: 65.4 }, { name: "Harith", img: "harith.png", wr: 60.2 }] },
+        "samwell": { name: "Samwell", role: "Flexible", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1100, winrate: 64.2, mvp: 380, heroes: [{ name: "Fanny", img: "fanny.png", wr: 68.0 }, { name: "Guinevere", img: "guinevere.png", wr: 60.5 }, { name: "Sora", img: "sora.png", wr: 59.0 }] },
+        "waneki": { name: "Waneki", role: "Mid Laner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 1560, winrate: 62.1, mvp: 320, heroes: [{ name: "Zhuxin", img: "zhuxin.png", wr: 65.8 }, { name: "Pharsa", img: "pharsa.png", wr: 60.1 }, { name: "Yve", img: "yve.png", wr: 55.4 }] },
+        "evatetsu": { name: "Evatetsu", role: "Mid Laner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 980, winrate: 59.5, mvp: 210, heroes: [{ name: "Lunox", img: "lunox.png", wr: 62.1 }, { name: "Vexana", img: "vexana.png", wr: 58.0 }, { name: "Aurora", img: "aurora.png", wr: 54.2 }] },
+        "francis": { name: "Francis. Yongg~66", role: "Jungler/Exp", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 2100, winrate: 71.2, mvp: 850, heroes: [{ name: "Ling", img: "ling.png", wr: 75.0 }, { name: "Alice", img: "alice.png", wr: 70.1 }, { name: "Cici", img: "cici.png", wr: 68.0 }] },
+        "cfyuu": { name: "Cfyuu.", role: "Jungler", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1850, winrate: 69.8, mvp: 720, heroes: [{ name: "Hayabusa", img: "hayabusa2.png", wr: 74.5 }, { name: "Joy", img: "joy.png", wr: 68.2 }, { name: "Yi Sun-Shin", img: "yss.png", wr: 65.0 }] },
+        "kayyie": { name: "Kayyie", role: "Midlaner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 850, winrate: 55.4, mvp: 180, heroes: [{ name: "Cecilion", img: "cecilion.png", wr: 62.0 }, { name: "Vale", img: "vale.jpg", wr: 58.0 }, { name: "Nana", img: "nana.jpg", wr: 54.0 }] },
+        "asamiya": { name: "Asamiya", role: "Exp Laner", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1350, winrate: 65.2, mvp: 410, heroes: [{ name: "Cici", img: "cici.png", wr: 68.5 }, { name: "Guinevere", img: "guinevere.png", wr: 63.2 }, { name: "Ruby", img: "ruby.png", wr: 60.1 }] },
+        "amuro": { name: "Amuro ray.", role: "Flexible", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1420, winrate: 66.8, mvp: 430, heroes: [{ name: "Lapu Lapu", img: "lapulapu.png", wr: 70.1 }, { name: "Alice", img: "alice.png", wr: 65.0 }, { name: "Uranus", img: "uranus.png", wr: 62.5 }] },
+        "claire": { name: "Claire", role: "Mid Laner", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1150, winrate: 63.5, mvp: 300, heroes: [{ name: "Luo Yi", img: "luoyi.png", wr: 66.8 }, { name: "Vexana", img: "vexana.png", wr: 61.2 }, { name: "aurora", img: "aurora.png", wr: 58.0 }] },
+        "miguel": { name: "MiGUEL.", role: "Mid Laner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 920, winrate: 58.2, mvp: 210, heroes: [{ name: "Lylia", img: "lylia.png", wr: 61.0 }, { name: "Kagura", img: "kagura.png", wr: 56.5 }, { name: "Xavier", img: "xavier.png", wr: 53.0 }] },
+        "tennndo": { name: "Tennndo.", role: "Exp Laner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 780, winrate: 54.5, mvp: 160, heroes: [{ name: "Xborg", img: "xborg.png", wr: 59.2 }, { name: "Yu Zhong", img: "yuzhong.png", wr: 55.0 }, { name: "Sora", img: "sora.png", wr: 50.1 }] },
+        "ophelia": { name: "Opheliaaa.", role: "Flexible", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 810, winrate: 56.8, mvp: 190, heroes: [{ name: "Chip", img: "chip.png", wr: 60.5 }, { name: "Nolan", img: "nolan.png", wr: 55.4 }, { name: "Freya", img: "freya.png", wr: 53.2 }] },
+        "locklie": { name: "Locklie_", role: "Roamer", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1680, winrate: 61.5, mvp: 280, heroes: [{ name: "Tigreal", img: "tigreal.png", wr: 64.0 }, { name: "Minotaur", img: "minotaur.png", wr: 60.5 }, { name: "Gatotkaca", img: "gatotkaca.png", wr: 58.2 }] }
     };
 
     const modal = document.getElementById('memberModal');
@@ -286,38 +286,48 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modalRole').textContent = data.role;
         document.getElementById('modalRankIcon').src = `assets/${data.rankIcon}`;
         document.getElementById('modalRankName').textContent = data.rankName;
-        document.getElementById('modalMatches').textContent = data.matches;
-        document.getElementById('modalWR').textContent = data.winrate + '%';
-        document.getElementById('modalMVP').textContent = data.mvp;
-
-        const wrBar = document.getElementById('modalWRBar');
-        wrBar.style.width = '0%'; // reset
-        setTimeout(() => wrBar.style.width = data.winrate + '%', 100);
 
         const heroesList = document.getElementById('modalHeroesList');
         heroesList.innerHTML = '';
-        data.heroes.forEach(h => {
-            heroesList.innerHTML += `
-                <div class="hero-item">
-                    <img src="assets/${h.img}" alt="${h.name}" onerror="this.style.display='none'">
-                    <div class="hero-info">
-                        <h4>${h.name}</h4>
-                        <div class="hero-wr-bar"><div class="hero-wr-fill" style="width: 0%" data-width="${h.wr}%"></div></div>
-                    </div>
-                    <span class="hero-wr-text">${h.wr}%</span>
+
+        const h0 = data.heroes[0] || null;
+        const h1 = data.heroes[1] || null;
+        const h2 = data.heroes[2] || null;
+
+        let heroesHTML = `<div class="hero-3d-layout">`;
+        if (h1) heroesHTML += `
+            <div class="hero-3d-card side-hero left-hero">
+                <div class="hero-rank-num">2</div>
+                <img src="assets/${h1.img}" alt="${h1.name}" onerror="this.style.display='none'">
+                <div class="hero-3d-info">
+                    <span class="hero-3d-name">${h1.name}</span>
                 </div>
-            `;
-        });
+            </div>`;
+
+        if (h0) heroesHTML += `
+            <div class="hero-3d-card main-hero">
+                <div class="hero-glow"></div>
+                <div class="hero-rank-num">1</div>
+                <img src="assets/${h0.img}" alt="${h0.name}" onerror="this.style.display='none'">
+                <div class="hero-3d-info">
+                    <span class="hero-3d-name">${h0.name}</span>
+                </div>
+            </div>`;
+
+        if (h2) heroesHTML += `
+            <div class="hero-3d-card side-hero right-hero">
+                <div class="hero-rank-num">3</div>
+                <img src="assets/${h2.img}" alt="${h2.name}" onerror="this.style.display='none'">
+                <div class="hero-3d-info">
+                    <span class="hero-3d-name">${h2.name}</span>
+                </div>
+            </div>`;
+
+        heroesHTML += `</div>`;
+        heroesList.innerHTML = heroesHTML;
 
         // Show modal
         modal.classList.add('active');
-
-        // Animate hero bars
-        setTimeout(() => {
-            document.querySelectorAll('.hero-wr-fill').forEach(bar => {
-                bar.style.width = bar.getAttribute('data-width');
-            });
-        }, 300); // Wait for modal scale animation to finish
     }
 
     // Event Delegation for Member Cards
