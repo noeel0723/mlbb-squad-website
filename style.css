@@ -1716,177 +1716,196 @@ img {
     letter-spacing: 1px;
 }
 
-/* 3D Heroes Layout */
+/* === HERO CARDS (Arcane Style) === */
 .hero-3d-layout {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: auto;
-    min-height: 300px;
-    position: relative;
-    padding-top: 36px;
-    padding-bottom: 10px;
-    gap: 32px;
+    gap: 16px;
+    padding: 8px 0 8px;
 }
 
 .hero-3d-card {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    border-radius: 12px;
-    overflow: visible;
-    background: none;
-    box-shadow: none;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 16px;
+    overflow: hidden;
     cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.35s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
 
+/* Side cards */
+.left-hero,
+.right-hero {
+    width: 110px;
+    height: 175px;
+    filter: brightness(0.88);
+}
+
+/* Main / center card */
+.main-hero {
+    width: 140px;
+    height: 220px;
+    z-index: 2;
+}
+
+/* Image fills the card entirely */
 .hero-3d-card img {
-    display: block;
-    object-fit: contain;
-    transition: all 0.4s ease;
-}
-
-.hero-3d-info {
-    display: none;
-}
-
-.hero-rank-num {
     position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: none;
-    color: rgba(243, 239, 227, 0.65);
-    font-size: 1rem;
-    font-family: var(--font-display);
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    z-index: 10;
-    white-space: nowrap;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.35s ease;
+    display: block;
 }
 
-.main-hero .hero-rank-num {
-    color: #ffd700;
-    font-size: 1.2rem;
+/* Right accent stripe */
+.hero-card-stripe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 26px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+.left-hero .hero-card-stripe,
+.right-hero .hero-card-stripe {
+    background: var(--primary);
+}
+
+.main-hero .hero-card-stripe {
+    background: linear-gradient(180deg, #c8973a 0%, #ffd700 50%, #c8973a 100%);
+}
+
+.hero-stripe-label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-family: var(--font-display);
+    font-size: 0.6rem;
     font-weight: 800;
-    top: -32px;
-    text-shadow: 0 0 12px rgba(255, 215, 0, 0.55);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.9);
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* Bottom gradient + name */
+.hero-card-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 26px;
+    padding: 28px 10px 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 100%);
+    z-index: 4;
 }
 
 .hero-3d-name {
-    font-size: 0.78rem;
-    font-weight: 600;
+    display: block;
     font-family: var(--font-display);
-    color: rgba(243, 239, 227, 0.7);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #fff;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
-    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.7);
     white-space: nowrap;
-    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .main-hero .hero-3d-name {
-    color: var(--cream);
-    font-size: 0.85rem;
-    font-weight: 700;
-    opacity: 1;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
 }
 
+/* Rank number — top-left corner */
+.hero-rank-num {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 5;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: rgba(255,255,255,0.75);
+}
+
+.main-hero .hero-rank-num {
+    background: rgba(200,151,58,0.85);
+    color: #fff;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 8px rgba(255,215,0,0.35);
+}
+
+/* Hover effects */
 .hero-3d-card:hover {
-    transform: scale(1.08) translateY(-8px);
-    z-index: 10 !important;
-    box-shadow: 0 15px 30px rgba(218, 165, 32, 0.2);
+    transform: translateY(-8px) scale(1.04);
+    filter: brightness(1) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.55);
+    z-index: 10;
 }
 
 .hero-3d-card:hover img {
     transform: scale(1.06);
 }
 
-/* Specific Positions */
-.left-hero,
-.right-hero {
-    z-index: 1;
-    filter: brightness(0.82);
-    margin-bottom: 0;
-}
+.hero-3d-info { display: none; }
+.hero-glow    { display: none; }
 
-.left-hero img,
-.right-hero img {
-    width: 110px;
-    height: 160px;
-}
-
-.main-hero {
-    z-index: 5;
-    animation: floatHero 6s ease-in-out infinite;
-    margin-bottom: 0;
-}
-
-.main-hero img {
-    width: 155px;
-    height: 215px;
-}
-
-.hero-glow {
-    position: absolute;
-    bottom: -15px;
-    width: 100px;
-    height: 15px;
-    background: radial-gradient(ellipse at center, rgba(136, 171, 142, 0.8) 0%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(4px);
-    z-index: -1;
-}
-
-/* Animations */
-@keyframes floatHero {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-15px);
-    }
-}
-
-/* Ensure animation doesn't conflict with hover */
-.main-hero:hover {
-    animation-play-state: paused;
-}
-
-/* Mobile Adjustments for 3D layout */
+/* === MOBILE === */
 @media (max-width: 480px) {
     .hero-3d-layout {
-        min-height: 220px;
-        gap: 16px;
-        padding-top: 30px;
+        gap: 10px;
     }
 
-    .main-hero img {
-        width: 110px;
-        height: 155px;
+    .left-hero,
+    .right-hero {
+        width: 88px;
+        height: 140px;
     }
 
-    .left-hero img,
-    .right-hero img {
-        width: 80px;
-        height: 115px;
+    .main-hero {
+        width: 112px;
+        height: 176px;
+    }
+
+    .hero-card-stripe {
+        width: 20px;
+    }
+
+    .hero-card-bottom {
+        right: 20px;
+        padding: 22px 8px 8px;
     }
 
     .hero-3d-name {
-        font-size: 0.65rem;
+        font-size: 0.72rem;
     }
 
-    .hero-rank-num {
-        font-size: 0.85rem;
+    .main-hero .hero-3d-name {
+        font-size: 0.82rem;
     }
 
-    .main-hero .hero-rank-num {
-        font-size: 1rem;
+    .hero-stripe-label {
+        font-size: 0.5rem;
+        letter-spacing: 2px;
     }
 }
