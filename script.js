@@ -269,7 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "miguel": { name: "MiGUEL.", role: "Mid Laner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 920, winrate: 58.2, mvp: 210, heroes: [{ name: "Lylia", img: "lylia.png", wr: 61.0 }, { name: "Kagura", img: "kagura.png", wr: 56.5 }, { name: "Xavier", img: "xavier.png", wr: 53.0 }] },
         "tennndo": { name: "Tennndo.", role: "Exp Laner", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 780, winrate: 54.5, mvp: 160, heroes: [{ name: "Xborg", img: "xborg.png", wr: 59.2 }, { name: "Yu Zhong", img: "yuzhong.png", wr: 55.0 }, { name: "Sora", img: "sora.png", wr: 50.1 }] },
         "ophelia": { name: "Opheliaaa.", role: "Flexible", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 810, winrate: 56.8, mvp: 190, heroes: [{ name: "Chip", img: "chip.png", wr: 60.5 }, { name: "Nolan", img: "nolan.png", wr: 55.4 }, { name: "Freya", img: "freya.png", wr: 53.2 }] },
-        "locklie": { name: "Locklie_", role: "Roamer", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1680, winrate: 61.5, mvp: 280, heroes: [{ name: "Tigreal", img: "tigreal.png", wr: 64.0 }, { name: "Minotaur", img: "minotaur.png", wr: 60.5 }, { name: "Gatotkaca", img: "gatotkaca.png", wr: 58.2 }] }
+        "locklie": { name: "Locklie_", role: "Roamer", rankIcon: "Mythical_Immortal.png", rankName: "Mythic Immortal", matches: 1680, winrate: 61.5, mvp: 280, heroes: [{ name: "Tigreal", img: "tigreal.png", wr: 64.0 }, { name: "Minotaur", img: "minotaur.png", wr: 60.5 }, { name: "Gatotkaca", img: "gatotkaca.png", wr: 58.2 }] },
+        "gley": { name: "Gley", role: "Roamer", rankIcon: "Mythical_Glory.png", rankName: "Mythic Glory", matches: 1680, winrate: 61.5, mvp: 240, heroes: [{ name: "Grock", img: "grock.png", wr: 67.0 }, { name: "Gatotkaca", img: "gatotkaca.png", wr: 60.5 }, { name: "Hylos", img: "hylos.png", wr: 58.2 }] }
     };
 
     const modal = document.getElementById('memberModal');
@@ -362,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     else if (rawName.includes('tennndo')) lookupName = 'tennndo';
                     else if (rawName.includes('ophelia')) lookupName = 'ophelia';
                     else if (rawName.includes('locklie')) lookupName = 'locklie';
-
+                    else if (rawName.includes('gley')) lookupName = 'gley';
                     renderModal(lookupName);
                 }
             }
