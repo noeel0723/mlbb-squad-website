@@ -1204,7 +1204,7 @@ img {
     object-fit: contain;
     border-radius: 10px;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                max-width 0.3s ease, max-height 0.3s ease;
+        max-width 0.3s ease, max-height 0.3s ease;
     transform-origin: center center;
     user-select: none;
     -webkit-user-drag: none;
@@ -1220,8 +1220,8 @@ img {
     position: fixed;
     top: 20px;
     right: 24px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     color: #fff;
     font-size: 1.8rem;
     line-height: 1;
@@ -1237,7 +1237,7 @@ img {
 }
 
 .lightbox-close:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     transform: rotate(90deg);
 }
 
@@ -1245,8 +1245,8 @@ img {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     color: #fff;
     font-size: 1.5rem;
     width: 48px;
@@ -1261,19 +1261,30 @@ img {
 }
 
 .lightbox-nav:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
-.lightbox-prev { left: 20px; }
-.lightbox-prev:hover { transform: translateY(-50%) translateX(-3px); }
-.lightbox-next { right: 80px; }
-.lightbox-next:hover { transform: translateY(-50%) translateX(3px); }
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-prev:hover {
+    transform: translateY(-50%) translateX(-3px);
+}
+
+.lightbox-next {
+    right: 80px;
+}
+
+.lightbox-next:hover {
+    transform: translateY(-50%) translateX(3px);
+}
 
 .lightbox-caption {
     font-family: var(--font-display);
     font-size: 0.9rem;
     font-weight: 600;
-    color: rgba(255,255,255,0.75);
+    color: rgba(255, 255, 255, 0.75);
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
@@ -1281,7 +1292,7 @@ img {
 
 .lightbox-hint {
     font-size: 0.72rem;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.3);
     letter-spacing: 0.5px;
 }
 
@@ -1291,8 +1302,15 @@ img {
         height: 38px;
         font-size: 1.1rem;
     }
-    .lightbox-prev { left: 8px; }
-    .lightbox-next { right: 56px; }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 56px;
+    }
+
     .lightbox-content.zoomed #lightboxImg {
         transform: scale(1.5);
     }
@@ -1310,9 +1328,17 @@ img {
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    gap: 60px;
     align-items: center;
     margin-top: 20px;
+}
+
+/* Right column to hold CTA box */
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
 .contact-heading {
@@ -1355,12 +1381,15 @@ img {
 }
 
 .contact-cta-box {
+    width: 100%;
     background: var(--dark-medium);
     border: 1px solid rgba(216, 207, 188, 0.12);
     border-radius: var(--radius-xl);
-    padding: 40px 36px;
+    padding: 48px 36px 36px;
     position: relative;
     overflow: hidden;
+    z-index: 0;
+    text-align: center;
 }
 
 .contact-cta-box::before {
@@ -1386,6 +1415,8 @@ img {
 
 .contact-buttons {
     display: flex;
+    justify-content: center;
+    /* Center buttons horizontally */
     gap: 14px;
     margin-bottom: 24px;
     flex-wrap: wrap;
@@ -1426,14 +1457,18 @@ img {
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .contact-wrapper {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 0;
+    }
+
+    .contact-right {
+        margin-top: 40px;
     }
 
     .contact-cta-box {
-        padding: 28px 22px;
+        padding: 44px 22px 28px;
     }
 
     .contact-buttons {
@@ -2007,8 +2042,8 @@ img {
     cursor: pointer;
     flex-shrink: 0;
     transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-                box-shadow 0.35s ease;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        box-shadow 0.35s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 /* Side cards */
@@ -2069,7 +2104,7 @@ img {
     font-weight: 800;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     white-space: nowrap;
     user-select: none;
 }
@@ -2081,7 +2116,7 @@ img {
     left: 0;
     right: 26px;
     padding: 28px 10px 10px;
-    background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, transparent 100%);
     z-index: 4;
 }
 
@@ -2094,7 +2129,7 @@ img {
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.1;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2116,25 +2151,25 @@ img {
     font-weight: 800;
     letter-spacing: 1px;
     line-height: 1;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(4px);
     padding: 4px 8px;
     border-radius: 6px;
-    color: rgba(255,255,255,0.75);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .main-hero .hero-rank-num {
-    background: rgba(200,151,58,0.85);
+    background: rgba(200, 151, 58, 0.85);
     color: #fff;
     font-size: 0.85rem;
-    box-shadow: 0 2px 8px rgba(255,215,0,0.35);
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.35);
 }
 
 /* Hover effects */
 .hero-3d-card:hover {
     transform: translateY(-8px) scale(1.04);
     filter: brightness(1) !important;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.55);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
     z-index: 10;
 }
 
@@ -2142,8 +2177,13 @@ img {
     transform: scale(1.06);
 }
 
-.hero-3d-info { display: none; }
-.hero-glow    { display: none; }
+.hero-3d-info {
+    display: none;
+}
+
+.hero-glow {
+    display: none;
+}
 
 /* === MOBILE === */
 @media (max-width: 480px) {
